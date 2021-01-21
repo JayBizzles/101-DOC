@@ -16,8 +16,8 @@ lives = 6
 history = []
 
 #TODO-3: - Import the logo from hangman_art.py and print it at the start of the game.
-art = hangman_art.stages
-print(art)
+print(hangman_art.stages)
+
 #Testing code
 print(f'Pssst, the solution is {chosen_word}.')
 
