@@ -17,8 +17,6 @@ EMPTY = False
 
 def coffeeMachine():
     usrval = input("What would you like? (espresso/latte/cappuccino): ")
-    resourceCheck()
-    
     if usrval in MENU.keys():
         coins = COINS.copy()
         print("Please insert coins: ")
@@ -55,8 +53,9 @@ def resourceSub(i):
         
 def resourceCheck():
     global EMPTY
-    for v in resources.values():
+    for k,v in resources.items():
         if v <= 0:
             EMPTY = True
+            print(f"need a refill of {k}")
 
 coffeeMachine()
