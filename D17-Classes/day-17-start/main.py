@@ -1,19 +1,36 @@
-class User:
-    def __init__(self,user_id,name):
-        self.id = user_id
-        self.name = name
-        self.followers = 0
-        self.following = 0
-        print("new user being created ...")
+class Bank:
+    def __init__(self):
+        self.roi = 000
+    def get_roi():
+        print(self.roi)
 
-    def follow(self,user):
-        user.followers += 1
-        self.following += 1
+class SBI(Bank):
+    def __init__(self):
+        self.roi =0
+    def get_roi(self):
+        self.roi = 0.08
+        print(f"my ROI:{self.roi} ")
 
-user_1 = User("001", "jamal")
-user_2 = User("002","angela")
+class ICICI(Bank):
+    def __init__(self):
+        self.roi =0
+    def get_roi(self):
+        self.roi = 0.09
+        print(f"my ROI:{self.roi} ")
 
-print(user_1.name)
-user_1.follow(user_2)
+class AXIS(Bank):
+    def __init__(self):
+        self.roi =0
+    def get_roi(self):
+        self.roi = 0.11
+        print(f"my ROI:{self.roi} ")
 
-print(f"User's Following: {user_1.following}")
+
+sbi_account = SBI(Bank)
+sbi_account.get_roi()
+
+icici_account = ICICI()
+icici_account.get_roi()
+
+axis_account = AXIS()
+axis_account.get_roi()
